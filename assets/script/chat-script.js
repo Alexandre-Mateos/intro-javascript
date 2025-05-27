@@ -3,4 +3,21 @@ let catLife = 100;
 
 let forceUtilisateur = document.querySelector("#force-utilisateur");
 let vieDuChat = document.querySelector("#vie-du-chat");
-let ImageDuChaton = document.querySelector("#image-du-chaton");
+let imageDuChaton = document.querySelector("#image-du-chaton");
+
+function removeKitten(){
+    imageDuChaton.remove()
+}
+
+imageDuChaton.addEventListener('click', () => {
+catLife = catLife - userForce;
+vieDuChat.innerHTML = catLife;
+if(catLife < 10){
+    alert ("monstre");
+    imageDuChaton.src= "assets/img/explosion.gif"
+    setTimeout(removeKitten, 500)
+}
+});
+
+
+
