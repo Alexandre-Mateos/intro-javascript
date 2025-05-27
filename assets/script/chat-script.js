@@ -13,11 +13,8 @@ imageDuChaton.addEventListener('click', () => {
 catLife = catLife - userForce;
 vieDuChat.innerHTML = catLife;
 if(catLife < 10){
-    alert ("monstre");
+    alert ("Tu es un monstre !");
     imageDuChaton.src= "assets/img/explosion.gif"
     setTimeout(removeKitten, 500)
 }
 });
-
-
-
