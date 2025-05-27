@@ -4,4 +4,7 @@ function addNewTask (){
     let newTask = document.createElement("p");
     taskList.append(inputContent, newTask);
 }
+newTask.addEventListner("click", function () {
+    newTask.remove();
+})
 
