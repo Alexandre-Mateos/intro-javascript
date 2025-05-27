@@ -4,3 +4,9 @@ function addNewTask (){
     let newTask = document.createElement("p");
     taskList.append(inputContent, newTask);
 }
+
+document.querySelectorAll("#to-do").addEventListener("click", isDone());
+
+function isDone(){
+    
+}
