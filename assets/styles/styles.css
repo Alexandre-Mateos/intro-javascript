@@ -14,6 +14,15 @@ li{
     margin: 0px;
 }
 
+button{
+    flex: 1;
+    border-radius: 0.5rem;
+    background-color: beige;
+}
+.bouton-supprimer{
+    background-color: blue;
+    color: #ffffff;
+}
 .container-boutons{
     display: flex;
     flex-direction: row;
