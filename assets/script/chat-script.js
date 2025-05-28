@@ -12,9 +12,6 @@ function removeKitten(){
 imageDuChaton.addEventListener('click', () => {
 catLife = catLife - userForce;
 vieDuChat.innerHTML = catLife;
-if (catLife === 30){
-    alert("Attention ! Tu vas le tuer");
-}
 if(catLife < 10){
     alert ("Tu es un monstre !");
     imageDuChaton.src= "assets/img/explosion.gif";
