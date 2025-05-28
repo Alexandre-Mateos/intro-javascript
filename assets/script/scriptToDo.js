@@ -26,7 +26,7 @@ selectionnerToutesLesTaches.addEventListener('click', () => {
     for (let i = 0 ; i < toDoLists.length ; i++){
         toDoLists[i].classList.add("done-style");
     }
-})
+});
 
 /* Supprimer une ou des tâches en se basant sur le style .done-style
 qui indique qu'un élément est "fait"
