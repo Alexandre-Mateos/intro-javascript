@@ -1,3 +1,6 @@
-.a-faire p {
+.a-faire {
     border: solid 1px blue;
+}
+.doneStyle{
+    background-color: red;
 }
