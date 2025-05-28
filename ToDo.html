@@ -8,11 +8,14 @@
     <link href="assets/styles/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        <input type="text" id="inputContent" placeholder="votre tâche">
-        <button type="button" id="addTask">ajouter</button>
+    <div class="task-form">
+        <input type="text" id="inputContent" placeholder="votre tâche">       
+        <div class="container-boutons">
+            <button type="button" id="addTask">ajouter</button>
+            <button type="button" id="selectAllTasks">tout selectionner</button>
+        </div>
     </div>
-    <h2>A faire</h2>
+    <h2>Ma to-do list</h2>
     <ul id="toDoTasks"></ul>
     
 </body>
