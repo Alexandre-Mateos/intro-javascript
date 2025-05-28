@@ -1,30 +1,35 @@
+let ajouterUneTache = document.querySelector("#addTask");
+let selectionnerToutesLesTaches = document.querySelector("#selectAllTasks");
+let champSaisie = document.querySelector("#inputContent");
+let listeDeTaches = document.querySelector("#toDoTasks");
 
-
-addTask.addEventListener('click', () => {
-    let inputContent = document.querySelector("#inputContent").value;  
-    let taskList = document.querySelector("#toDoTasks");
-    if(inputContent.length >0){
-        let newTask = document.createElement("li");
-        let taskContent = document.createTextNode (inputContent);
-        
-        newTask.addEventListener('click', () =>{
-            const newTaksClassLists = newTask.classList;
-            if (newTaksClassLists.toggle("done-style")){
-                newTask.classList.add("done-style");
-            }
-        });
-        
-        newTask.appendChild(taskContent);
-        taskList.appendChild(newTask);
-        newTask.classList.add("a-faire");
-        document.querySelector("#inputContent").value = "";
+/*
+ * Listener ajoute une tâche au clique
+ */
+ajouterUneTache.addEventListener('click', () => {
+    if(champSaisie.value.length >0){
+        let nouvelleTache = createListElement();
+        listeDeTaches.appendChild(nouvelleTache);
+        nouvelleTache.classList.add("a-faire");
+        champSaisie.value = "";
     }
 });
 
-selectAllTasks.addEventListener('click', () => {
+// applique le style done-style à tout les éléments de liste
+selectionnerToutesLesTaches.addEventListener('click', () => {
     let toDoLists = document.querySelectorAll("li");
     for (let i = 0 ; i < toDoLists.length ; i++){
         toDoLists[i].classList.add("done-style");
     }
 })
 
+
+// créer un élément de la liste
+function createListElement(){
+        let nouvelleTache = document.createElement("li");
+        nouvelleTache.innerHTML = champSaisie.value;   
+        nouvelleTache.addEventListener('click', () =>{
+            nouvelleTache.classList.toggle('done-style');
+        });
+        return nouvelleTache;
+}
