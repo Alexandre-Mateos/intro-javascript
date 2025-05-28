@@ -19,7 +19,8 @@ ajouterUneTache.addEventListener('click', () => {
     }
 });
 
-// applique le style done-style à tout les éléments de liste
+/* applique le style done-style à tout les éléments de liste
+*/
 selectionnerToutesLesTaches.addEventListener('click', () => {
     let toDoLists = document.querySelectorAll("li");
     for (let i = 0 ; i < toDoLists.length ; i++){
@@ -27,8 +28,8 @@ selectionnerToutesLesTaches.addEventListener('click', () => {
     }
 })
 
-/* Supprimer une ou des tâches en se basant sur le style
-.done-style qui indique qu'un élément est "fait"
+/* Supprimer une ou des tâches en se basant sur le style .done-style
+qui indique qu'un élément est "fait"
 */
 supprimerUneTache.addEventListener('click', () => {
     let listeTacheRealisees = document.querySelectorAll(".done-style");
